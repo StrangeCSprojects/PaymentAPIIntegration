@@ -1,9 +1,13 @@
+# Import necessary modules for database modeling and timestamping
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
+# Initialize SQLAlchemy database instance
 db = SQLAlchemy()
 
+# Define the Transaction database model
 class Transaction(db.Model):
+    # Declare all model fields (columns)
     id = db.Column(db.Integer, primary_key=True)
     amount = db.Column(db.Float, nullable=False)
     currency = db.Column(db.String(3), nullable=False)
