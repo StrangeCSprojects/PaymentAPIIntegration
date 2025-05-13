@@ -1,9 +1,8 @@
 # Import necessary modules for database modeling and timestamping
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+from . import db  # Assumes 'db = SQLAlchemy()' is initialized in __init__.py
 
-# Initialize SQLAlchemy database instance
-db = SQLAlchemy()
 
 # Define the Transaction database model
 class Transaction(db.Model):
